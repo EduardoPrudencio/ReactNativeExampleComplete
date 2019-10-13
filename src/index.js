@@ -1,24 +1,27 @@
 import React from 'react';
-import {Text} from 'react-native';
-import {Container} from './style';
+import {StatusBar} from 'react-native';
+import {Container, Content} from './style';
 import TextInput from './Components/TextInput';
 
 export default function App() {
   return (
     <>
+      <StatusBar barStyle="light-content" />
       <Container>
-        <TextInput
-          title={'Login'}
-          placeholder={'Digite seu login'}
-          icon={'md-person'}
-        />
+        <Content>
+          <TextInput
+            title={'Login'}
+            placeholder={'Digite seu login'}
+            icon={'md-person'}
+          />
 
-        <TextInput
-          title={'Senha'}
-          placeholder={'Digite sua senha'}
-          icon={'md-key'}
-          isPassword={true}
-        />
+          <TextInput
+            title={'Senha'}
+            placeholder={'Digite sua senha'}
+            icon={'md-key'}
+            isPassword={true}
+          />
+        </Content>
       </Container>
     </>
   );

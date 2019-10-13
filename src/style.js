@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.View`
-  margin-top: 40px;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #13293d;
+`;
+
+export const Content = styled.View`
+  width: 80%;
+  height: 100%;
+  margin-top: 100px;
+  background-color: #13293d;
 `;
