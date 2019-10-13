@@ -1,0 +1,17 @@
+import React from 'react';
+import {Container, SecondContainer, Title, CustomInput} from './style';
+import Icon from 'react-native-vector-icons/Ionicons';
+
+export default function TextInput({title, placeholder, icon, isPassword}) {
+  return (
+    <>
+      <Container>
+        <Icon name={icon} size={20} color="#006494" />
+        <SecondContainer>
+          <Title>{title}</Title>
+          <CustomInput placeholder={placeholder} secureTextEntry={isPassword} />
+        </SecondContainer>
+      </Container>
+    </>
+  );
+}
