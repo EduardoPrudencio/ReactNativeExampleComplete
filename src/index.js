@@ -1,5 +1,5 @@
 import React from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, TouchableOpacity, Text} from 'react-native';
 import {Container, Content, Title} from './style';
 import TextInput from './Components/TextInput';
 
@@ -22,6 +22,8 @@ export default function App() {
             icon={'md-key'}
             isPassword={true}
           />
+
+          {/* <TextLink>Criar conta</TextLink> */}
         </Content>
       </Container>
     </>

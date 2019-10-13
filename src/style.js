@@ -19,4 +19,10 @@ export const Title = styled.Text`
   color: #cecece;
   font-size: 28px;
   align-self: center;
+  font-family: 'PoiretOne-Regular';
+  font-weight: bold;
+`;
+
+export const TextLink = styled.Text`
+  color: #fff;
 `;

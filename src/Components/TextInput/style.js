@@ -7,6 +7,7 @@ export const Container = styled.View`
   align-items: flex-start;
   justify-content: flex-start;
   padding: 5px;
+  margin-top: 10px;
   border-style: solid;
   border-color: #006494;
   border-width: 1px;
