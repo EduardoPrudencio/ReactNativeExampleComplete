@@ -14,3 +14,9 @@ export const Content = styled.View`
   margin-top: 100px;
   background-color: #13293d;
 `;
+
+export const Title = styled.Text`
+  color: #cecece;
+  font-size: 28px;
+  align-self: center;
+`;

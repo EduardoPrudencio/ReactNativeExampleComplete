@@ -1,6 +1,6 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
-import {Container, Content} from './style';
+import {Container, Content, Title} from './style';
 import TextInput from './Components/TextInput';
 
 export default function App() {
@@ -9,6 +9,7 @@ export default function App() {
       <StatusBar barStyle="light-content" />
       <Container>
         <Content>
+          <Title>Meus Gastos</Title>
           <TextInput
             title={'Login'}
             placeholder={'Digite seu login'}
