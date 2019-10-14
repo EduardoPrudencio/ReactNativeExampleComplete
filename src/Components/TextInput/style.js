@@ -21,6 +21,7 @@ export const SecondContainer = styled.View`
 export const Title = styled.Text`
   font-size: 16px;
   color: #247ba0;
+  font-family: 'PoiretOne-Regular';
 `;
 
 export const CustomInput = styled.TextInput.attrs({
@@ -30,4 +31,5 @@ export const CustomInput = styled.TextInput.attrs({
   margin-top: 5px;
   color: #247ba0;
   font-size: 16px;
+  font-family: 'PoiretOne-Regular';
 `;

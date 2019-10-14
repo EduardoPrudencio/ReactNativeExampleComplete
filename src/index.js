@@ -1,8 +1,8 @@
 import React from 'react';
-import {StatusBar, TouchableOpacity, Text} from 'react-native';
-import {Container, Content, Title} from './style';
+import {StatusBar, TouchableOpacity} from 'react-native';
+import {Container, Content, Title, BoxLinks, TextLink} from './style';
 import TextInput from './Components/TextInput';
-
+import Button from './Components/Button';
 export default function App() {
   return (
     <>
@@ -19,11 +19,23 @@ export default function App() {
           <TextInput
             title={'Senha'}
             placeholder={'Digite sua senha'}
-            icon={'md-key'}
+            icon={'ios-lock'}
             isPassword={true}
           />
 
-          {/* <TextLink>Criar conta</TextLink> */}
+          <BoxLinks>
+            <TouchableOpacity>
+              <TextLink style={{color: '#aa2440'}}>Esqueci a senha</TextLink>
+            </TouchableOpacity>
+            <TextLink> ou </TextLink>
+
+            <TouchableOpacity>
+              <TextLink style={{color: '#40bfc1'}}>Criar conta</TextLink>
+            </TouchableOpacity>
+          </BoxLinks>
+          <TouchableOpacity>
+            <Button text={'Login'} />
+          </TouchableOpacity>
         </Content>
       </Container>
     </>
