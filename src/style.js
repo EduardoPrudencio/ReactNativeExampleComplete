@@ -41,3 +41,7 @@ export const TextLink = styled.Text`
   margin-top: 10px;
   font-family: 'PoiretOne-Regular';
 `;
+
+export const Logo = styled.Image`
+  align-self: center;
+`;
