@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, SecondContainer, Title, CustomInput} from './style';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function TextInput({title, placeholder, icon, isPassword}) {
   return (

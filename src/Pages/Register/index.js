@@ -5,7 +5,7 @@ import TextInput from '../../Components/TextInput';
 import Button from '../../Components/Button';
 import logo from '../../../src/assets/images/Pic.png';
 
-export default function Login({navigation}) {
+export default function Register({navigation}) {
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -20,27 +20,29 @@ export default function Login({navigation}) {
           />
 
           <TextInput
+            title={'Email'}
+            placeholder={'Digite seu Email'}
+            icon={'email'}
+          />
+
+          <TextInput
             title={'Senha'}
             placeholder={'Digite sua senha'}
             icon={'lock'}
             isPassword={true}
           />
 
-          <BoxLinks>
-            <TouchableOpacity>
-              <TextLink style={{color: '#aa2440'}}>Esqueci a senha</TextLink>
-            </TouchableOpacity>
-            <TextLink> ou </TextLink>
-
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate('Register');
-              }}>
-              <TextLink style={{color: '#40bfc1'}}>Criar conta</TextLink>
-            </TouchableOpacity>
-          </BoxLinks>
           <TouchableOpacity>
-            <Button text={'Login'} />
+            <Button text={'Registrar'} />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Login');
+            }}>
+            <TextLink style={{color: '#aa2440', alignSelf: 'center'}}>
+              Já possuo cadastro
+            </TextLink>
           </TouchableOpacity>
         </Content>
       </Container>
