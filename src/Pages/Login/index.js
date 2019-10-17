@@ -1,11 +1,22 @@
 import React from 'react';
 import {StatusBar, TouchableOpacity} from 'react-native';
+import {useDispatch} from 'react-redux';
 import {Container, Content, Title, BoxLinks, TextLink, Logo} from './style';
 import TextInput from '../../Components/TextInput';
 import Button from '../../Components/Button';
 import logo from '../../../src/assets/images/Pic.png';
 
 export default function Login({navigation}) {
+  const dispatch = useDispatch();
+
+  const handleAddUser = () => {
+    const user = {login: 'Admin', senha: 'Admoin2526'};
+    dispatch({
+      type: 'ADD_USER',
+      user,
+    });
+  };
+
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -39,7 +50,7 @@ export default function Login({navigation}) {
               <TextLink style={{color: '#40bfc1'}}>Criar conta</TextLink>
             </TouchableOpacity>
           </BoxLinks>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleAddUser}>
             <Button text={'Login'} />
           </TouchableOpacity>
         </Content>
