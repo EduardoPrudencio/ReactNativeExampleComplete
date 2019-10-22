@@ -1,5 +1,5 @@
-import React from 'react';
-import {StatusBar, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {StatusBar, TouchableOpacity, Alert} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {Container, Content, Title, BoxLinks, TextLink, Logo} from './style';
 import TextInput from '../../Components/TextInput';
@@ -7,14 +7,31 @@ import Button from '../../Components/Button';
 import logo from '../../../src/assets/images/Pic.png';
 
 export default function Login({navigation}) {
+  const [textLogin, setTextLogin] = useState();
+  const [textPassword, setTextPassword] = useState();
+
   const dispatch = useDispatch();
 
   const handleAddUser = () => {
-    const user = {login: 'Admin', senha: 'Admoin2526'};
-    dispatch({
-      type: 'ADD_USER',
-      user,
-    });
+    const dadosInvalidos = true;
+    console.tron.log('Login: ', textLogin, 'senha: ', textPassword);
+
+    if (dadosInvalidos) {
+      Alert.alert('Dados inválidos', 'Verifique seus dados e tente novamente');
+    } else if (dadosInvalidos) {
+      console.tron.log(textLogin);
+
+      Alert.alert('Deseja salvar seus dados de acesso?', null, [
+        {text: 'Sim'},
+        {text: 'Não'},
+      ]);
+
+      const user = {login: 'Admin', status: 'valido'};
+      dispatch({
+        type: 'ADD_USER',
+        user,
+      });
+    }
   };
 
   return (
@@ -28,6 +45,9 @@ export default function Login({navigation}) {
             title={'Login'}
             placeholder={'Digite seu login'}
             icon={'account'}
+            onChangeText={text => setTextLogin(text)}
+
+            //closure
           />
 
           <TextInput
@@ -35,6 +55,7 @@ export default function Login({navigation}) {
             placeholder={'Digite sua senha'}
             icon={'lock'}
             isPassword={true}
+            onChangeText={text => setTextPassword(text)}
           />
 
           <BoxLinks>

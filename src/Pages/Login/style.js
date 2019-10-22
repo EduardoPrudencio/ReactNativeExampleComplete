@@ -11,7 +11,7 @@ export const Container = styled.View`
 export const Content = styled.View`
   width: 80%;
   height: 70%;
-  margin-top: 100px;
+  margin-top: 20px;
   background-color: #13293d;
 `;
 
