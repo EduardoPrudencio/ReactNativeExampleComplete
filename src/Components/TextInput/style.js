@@ -1,3 +1,4 @@
+import {Platform} from 'react-native';
 import styled from 'styled-components';
 
 export const Container = styled.View`
@@ -26,7 +27,7 @@ export const Title = styled.Text`
 
 export const CustomInput = styled.TextInput.attrs({
   placeholderTextColor: '#61707d',
-  maxLength: 15,
+  maxLength: 25,
 })`
   margin-top: 5px;
   color: #247ba0;
